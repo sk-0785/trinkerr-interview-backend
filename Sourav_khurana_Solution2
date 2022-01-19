@@ -1,0 +1,27 @@
+const resolve=function(s1,s2)
+{
+    
+    
+    var len=s2.length;
+    if(s2.length>s1.length)
+    return s1;
+    var arr=[];
+    for(let i=0;i<s1.length;i++)
+    arr.push(s1[i]);  
+                          
+    for(let i=0;i<arr.length;i++)
+    {
+        if(len>arr.length || i>=arr.length)
+        break;
+        if(arr.slice(i,len).join()===s2)                       //converting characterrs subarray to string
+        {
+            arr=arr.splice(i,len);
+            i--;
+        }
+        else
+        i++;
+    }
+  
+    return arr.join();
+
+}

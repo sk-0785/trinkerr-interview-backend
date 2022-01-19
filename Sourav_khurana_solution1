@@ -1,0 +1,43 @@
+const resolve=function(str1, str2)
+{
+    var s1="",s2="",st2="";
+    if(str1.length!==str2.length)
+    {
+      if(str1.length>str2.length)
+      {s1=str1;
+      s2=str2;
+      }
+      else
+      {
+        s1=str2;
+        s2=str1;
+      }
+    var arr=[],st2="";
+    for(let i=1;i<=s1.length-s2.length;i++)
+   { arr.push(0);}
+    //converting array to strings of zeros
+     st2=arr.join()+s2;                                                   //    123455   ,    000456                                                          
+    }                                           
+    else                                   
+    {
+    s1=str1;
+    st2=str2;
+    
+    }
+ 
+      var no=0,car=0;
+      var arr=[];
+      for(var i=s1.length-1;i>=0;i--)
+      {
+        let a=Integer.parseInt(s1[i])
+        let b=Integer.parseInt(st2[i]);
+        let cal=a+b;
+        car=cal/10;
+        arr.push(cal%10);
+      }
+      var ans=arr.reverse()||[];
+      var res=ans.join();
+      return res;
+
+}
+
